@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abogados - Belén Conecta</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nuestros estilos -->
+    <link rel="stylesheet" href="../master.css">
+</head>
+<body>
+    <header>
+        <div class="container py-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <img src="../img/logo.png" alt="Logo" width="60" height="60">
+                <button onclick="window.location.href='../index.html'" class="back-button">
+                    <i class="fas fa-arrow-left me-2"></i> Volver al Inicio
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <div class="category-header">
+            <img src="../img/categoria-abogado.jpg" alt="Abarrotes" class="category-icon">
+            <h1>Abogados en Belén</h1>
+            <p class="slogan">Todos los Abogados en tu comunidad</p>
+        </div>
+
+        <div class="row">
+            <!-- Tienda 1 -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="../img/tienda1.jpg" class="service-img" alt="Tienda La Esperanza">
+                    <div class="service-info">
+                        <h3>Tienda La Esperanza</h3>
+                        <p>Productos básicos y verduras frescas</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bloque 3, Local 8</p>
+                        <p><i class="fas fa-clock"></i> Horario: 8:00 AM - 10:00 PM</p>
+                        <button class="btn-contact" onclick="openModal('Tienda La Esperanza', 'Tienda de abarrotes con los mejores precios de la zona. Productos frescos y de calidad.', '../img/tienda1.jpg', '55 5678 9012', 'la.esperanza@ejemplo.com', 'Bloque 3, Local 8', 'Horario: 8:00 AM - 10:00 PM')">
+                            <i class="fas fa-phone"></i> Llamar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tienda 2 -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="../img/tienda2.jpg" class="service-img" alt="Mini Super Belén">
+                    <div class="service-info">
+                        <h3>Mini Super Belén</h3>
+                        <p>Abarrotes y productos de limpieza</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bloque 7, Local 2</p>
+                        <p><i class="fas fa-clock"></i> Horario: 7:00 AM - 11:00 PM</p>
+                        <button class="btn-contact" onclick="openModal('Mini Super Belén', 'La mejor selección de abarrotes, productos de limpieza y artículos de primera necesidad.', '../img/tienda2.jpg', '55 6789 0123', 'minisuper.belen@ejemplo.com', 'Bloque 7, Local 2', 'Horario: 7:00 AM - 11:00 PM')">
+                            <i class="fas fa-phone"></i> Llamar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tienda 3 -->
+            <div class="col-md-4">
+                <div class="service-card">
+                    <img src="../img/tienda3.jpg" class="service-img" alt="Abarrotes Don Pepe">
+                    <div class="service-info">
+                        <h3>Abarrotes Don Pepe</h3>
+                        <p>Productos locales y artículos varios</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bloque 2, Local 5</p>
+                        <p><i class="fas fa-clock"></i> Horario: 6:00 AM - 10:00 PM</p>
+                        <button class="btn-contact" onclick="openModal('Abarrotes Don Pepe', 'Tienda familiar con productos locales y artículos variados para toda la familia.', '../img/tienda3.jpg', '55 7890 1234', 'don.pepe@ejemplo.com', 'Bloque 2, Local 5', 'Horario: 6:00 AM - 10:00 PM')">
+                            <i class="fas fa-phone"></i> Llamar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-4 text-center mt-5">
+        <div class="container">
+            <p class="mb-0">© 2023 Belén Conecta - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Contacto -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <img src="" alt="Logo del servicio" class="modal-logo" id="modalLogo">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="contact-info mt-4">
+                <p><i class="fas fa-phone me-2"></i> <span id="modalPhone"></span></p>
+                <p><i class="fas fa-envelope me-2"></i> <span id="modalEmail"></span></p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <span id="modalLocation"></span></p>
+                <p id="modalExtraInfo"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Nuestro JS -->
+    <script src="../master.js"></script>
+</body>
+</html>

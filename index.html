@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="description" content="Belén Conecta es una revista digital que promueve negocios y talentos locales en la comunidad de Belén. Encuentra servicios, tiendas, y mucho más.">
+    <title>Belén Conecta - Servicios Locales</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nuestro CSS -->
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+    <!-- Header Steam -->
+    <header>
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <img src="img/logo.png" alt="Logo" width="60" height="60" class="me-3">
+                <nav class="d-flex gap-4">
+                    <a href="#" class="text-white text-decoration-none fw-bold">Galería</a>
+                    <a href="nosotros.html" class="text-white text-decoration-none fw-bold">Nosotros</a>
+                    <a href="contactanos.html" class="text-white text-decoration-none fw-bold">Contáctanos</a>
+                    <a href="#categorias" class="text-white text-decoration-none fw-bold">Categorías</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container py-4">
+        <!-- Título y slogan -->
+        <div class="text-center mb-5">
+            <h1>Belén Conecta</h1>
+            <p class="slogan">Tu guía de servicios y talentos locales</p>
+        </div>
+
+        <!-- Carrusel original -->
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/imagen (1).jpg" alt="Comunidad Belén">
+                <img src="img/imagen (2).jpg" alt="Servicios locales">
+                <img src="img/imagen (3).jpg" alt="Vecinos trabajando">
+                <img src="img/windows-10x-3840x2160-microsoft-4k-22711 (2).jpg" alt="Vecinos trabajando">
+                <img src="img/imagen (1).png" alt="Vecinos trabajando">
+                <img src="img/imagen (2).png" alt="Vecinos trabajando">
+            </div>
+            <!-- Controles manuales -->
+            <div class="carousel-controls">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
+            </div>
+        </div>
+
+
+
+        <!-- Sección: Categorías de Negocios -->
+        <section id="categorias" class="category-section">
+        <section class="category-section">
+            <h2 class="category-title">Explora por Categorías</h2>
+            <p class="text-center mb-4">Selecciona una categoría para ver todos los negocios disponibles</p>
+
+            <div class="category-grid">
+                <!-- Categoría 1 -->
+                <a href="lugares/abarrotes.html" class="category-item">
+                    <img src="img/categoria-abarrotes.jpg" alt="Abarrotes" class="category-icon">
+                    <div class="category-name">Abarrotes</div>
+                </a>
+
+                <!-- Categoría 2 -->
+                <a href="lugares/fontaneria.html" class="category-item">
+                    <img src="img/categoria-fontaneria.jpg" alt="Fontanería" class="category-icon">
+                    <div class="category-name">Fontanería</div>
+                </a>
+
+                <!-- Categoría 3 -->
+                <a href="lugares/electricistas.html" class="category-item">
+                    <img src="img/categoria-electricistas.jpg" alt="Electricistas" class="category-icon">
+                    <div class="category-name">Electricistas</div>
+                </a>
+
+                <!-- Categoría 4 -->
+                <a href="lugares/veterinarios.html" class="category-item">
+                    <img src="img/categoria-veterinarios.jpg" alt="Veterinarios" class="category-icon">
+                    <div class="category-name">Veterinarios</div>
+                </a>
+
+                <!-- Categoría 5 -->
+                <a href="lugares/restaurantes.html" class="category-item">
+                    <img src="img/categoria-restaurantes.jpg" alt="Restaurantes" class="category-icon">
+                    <div class="category-name">Restaurantes</div>
+                </a>
+
+                <!-- Categoría 6 -->
+                <a href="lugares/profesores.html" class="category-item">
+                    <img src="img/categoria-Profesores.jpg" alt="Farmacias" class="category-icon">
+                    <div class="category-name">Profesores/regularizacion</div>
+                </a>
+
+                <!-- Categoría 7 -->
+                <a href="lugares/carpinteros.html" class="category-item">
+                    <img src="img/categoria-carpinteros.jpg" alt="Carpinteros" class="category-icon">
+                    <div class="category-name">Carpinteros</div>
+                </a>
+
+                <!-- Categoría 8 -->
+                <a href="lugares/peluquerias.html" class="category-item">
+                    <img src="img/categoria-peluquerias.jpg" alt="Peluquerías" class="category-icon">
+                    <div class="category-name">Peluquerías</div>
+                </a>
+                <a href="lugares/abogado.html" class="category-item">
+                    <img src="img/categoria-abogado.jpg" alt="Peluquerías" class="category-icon">
+                    <div class="category-name">Abogados</div>
+                </a>
+            </div>
+        </section>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-4 text-center mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-4 mb-3">
+                <a href="#" class="text-white text-decoration-none">Facebook</a>
+                <a href="#" class="text-white text-decoration-none">WhatsApp</a>
+                <a href="#" class="text-white text-decoration-none">Teléfono</a>
+            </div>
+            <p class="mb-0">© 2023 Belén Conecta - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Contacto -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <img src="" alt="Logo del servicio" class="modal-logo" id="modalLogo">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="contact-info mt-4">
+                <p><i class="fas fa-phone me-2"></i> <span id="modalPhone"></span></p>
+                <p><i class="fas fa-envelope me-2"></i> <span id="modalEmail"></span></p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <span id="modalLocation"></span></p>
+                <p id="modalExtraInfo"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Nuestro JS -->
+    <script src="master.js"></script>
+</body>
+</html>

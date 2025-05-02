@@ -1,0 +1,235 @@
+body {
+    background-color: #171a21;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Steam */
+header {
+    background-color: #1b2838;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Tarjetas estilo Mercado Libre pero con colores Steam */
+.service-card {
+    background-color: #2a475e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.service-img {
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.service-info {
+    padding: 15px;
+}
+
+.service-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.service-desc {
+    font-size: 14px;
+    color: #b8b6b4;
+    margin-bottom: 10px;
+}
+
+.service-location {
+    font-size: 12px;
+    color: #8b929a;
+    margin-bottom: 15px;
+}
+
+.btn-contact {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #6a1b9a;
+}
+
+/* Carrusel como en tu versión original */
+.carousel-container {
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Líneas divisorias */
+.divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, purple, transparent);
+    margin: 40px 0;
+}
+
+/* Títulos de categoría */
+.category-title {
+    color: purple;
+    margin-bottom: 20px;
+    font-size: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a475e;
+}
+
+/* Modal personalizado */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #2a475e;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+/* Estilos para la sección de categorías */
+.category-section {
+    padding: 40px 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.category-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 2px solid purple;
+}
+
+.category-name {
+    font-size: 16px;
+    color: white;
+}
+
+.back-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 30px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+}
+
+.back-button:hover {
+    background-color: #6a1b9a;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .category-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+html {
+        scroll-behavior: smooth;
+    }
+.slogan{color: white}
