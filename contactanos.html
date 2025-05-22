@@ -3,74 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos - Belén Conecta</title>
+    <meta name="description" content="Contáctanos, planes de publicidad y términos y condiciones de Belén Conecta.">
+    <title>Contáctanos y Publicidad - Belén Conecta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="master.css">
     <style>
-        body {
-            background-color: #171a21;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        .contact-info {
+        /* Estilos adicionales para esta página que pueden no estar en master.css */
+        .contact-info-text { /* Renombrado para no confundir con .contact-info del modal */
             color: #b8b6b4;
             font-size: 18px;
             text-align: center;
-            padding: 50px;
+            padding: 20px 0; /* Ajustado para que no sea un padding tan excesivo */
         }
         .highlight {
             color: purple;
             font-weight: bold;
         }
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
+
+        /* Estilo para justificar el texto solo en la sección de términos */
+        /* Esta clase se aplica a la sección completa de términos */
+        .terminos-justificados p,
+        .terminos-justificados li {
+            text-align: justify; /* Propiedad CSS para justificar el texto */
+            text-justify: inter-word; /* Ayuda a la justificación en algunos navegadores */
         }
-        .nav-link:hover {
-            color: purple;
+
+        /* Asegura que los puntos de la lista se vean con la justificación */
+        .terminos-justificados ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
         <div class="container">
-            <a class="navbar-brand" href="#">Belén Conecta</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contactanos.html">Contáctanos</a>
-                    </li>
-                </ul>
+            <div class="d-flex align-items-center">
+                <img src="img/logo.png" alt="Logo" width="60" height="60" class="me-3">
+                <nav class="d-flex gap-4">
+                    <a href="index.html" class="text-white text-decoration-none fw-bold">Inicio</a>
+                    <a href="#" class="text-white text-decoration-none fw-bold">Galería</a>
+                    <a href="nosotros.html" class="text-white text-decoration-none fw-bold">Nosotros</a>
+                    <a href="contactanos.html" class="text-white text-decoration-none fw-bold">Contáctanos</a>
+                    <a href="index.html#categorias" class="text-white text-decoration-none fw-bold">Categorías</a>
+                </nav>
             </div>
         </div>
-    </nav>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <p class="contact-info">
-                    ¿Quieres saber más sobre nosotros o tienes alguna pregunta? No dudes en contactarnos:
-                </p>
-                <p class="contact-info">
-                    Teléfono: <span class="highlight">+52 551 694 3808</span>
-                </p>
-                <p class="contact-info">
-                    <a href="https://wa.me/+525516943808" target="_blank" class="highlight">Enviar mensaje por WhatsApp</a>
-                </p>
-                <p class="contact-info">
-                    Teléfono: <span class="highlight">+52 56 2824 0087</span>
-                </p>
-                <p class="contact-info">
-                    <a href="https://wa.me/+525628240087" target="_blank" class="highlight">Enviar mensaje por WhatsApp</a>
-                </p>
+    </header>
+
+    <main class="container py-5">
+        <section id="contacto" class="mb-5">
+            <h1 class="text-center mb-4 category-title">Contáctanos</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="contact-info-text">
+                        ¿Quieres saber más sobre nosotros o tienes alguna pregunta? No dudes en contactarnos:
+                    </p>
+                    <div class="text-center">
+                        <p class="contact-info-text">
+                            Teléfono: <span class="highlight">+52 551 694 3808</span>
+                        </p>
+                        <p class="contact-info-text">
+                            <a href="https://wa.me/+525516943808?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20Bel%C3%A9n%20Conecta." target="_blank" class="highlight text-decoration-none d-inline-flex align-items-center"><i class="fab fa-whatsapp me-2"></i> Enviar mensaje por WhatsApp</a>
+                        </p>
+                        <p class="contact-info-text">
+                            Teléfono: <span class="highlight">+52 56 2824 0087</span>
+                        </p>
+                        <p class="contact-info-text">
+                            <a href="https://wa.me/+525628240087?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20Bel%C3%A9n%20Conecta." target="_blank" class="highlight text-decoration-none d-inline-flex align-items-center"><i class="fab fa-whatsapp me-2"></i> Enviar mensaje por WhatsApp</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section id="planes-precios" class="py-5">
+            <h2 class="category-title text-center mb-4">Nuestros Planes de Publicidad</h2>
+            <p class="text-center mb-5">Elige el plan que mejor se adapte a tu negocio. ¡Invierte en tu visibilidad local!</p>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+                <div class="col">
+                    <div class="service-card h-100 p-4 d-flex flex-column">
+                        <h3 class="service-title text-white mb-3">Plan Quincenal</h3>
+                        <p class="service-desc mb-4">Perfecto para probar o para promociones rápidas.</p>
+                        <div class="d-flex align-items-baseline justify-content-center mb-4">
+                            <span class="fs-1 fw-bold">$35</span>
+                            <span class="fs-5 text-muted">MXN / quincena</span>
+                        </div>
+                        <ul class="list-unstyled text-start mb-auto">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Publicación de anuncio regular</li>
+                            <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i> Sin publicación en portada</li>
+                            <li class="mb-2"><i class="fas fa-times-circle text-danger me-2"></i> Sin redes sociales incluidas</li>
+                        </ul>
+                        <a href="https://wa.me/+525516943808?text=Hola,%20me%20interesa%20el%20paquete%20Quincenal.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n?" target="_blank" class="btn-contact mt-4 text-decoration-none">Contratar Plan Quincenal</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="service-card h-100 p-4 d-flex flex-column border border-3 border-info">
+                        <h3 class="service-title text-white mb-3">Plan Mensual</h3>
+                        <p class="service-desc mb-4">La mejor opción para una presencia constante.</p>
+                        <div class="d-flex align-items-baseline justify-content-center mb-4">
+                            <span class="fs-1 fw-bold">$60</span>
+                            <span class="fs-5 text-muted">MXN / mes</span>
+                        </div>
+                        <ul class="list-unstyled text-start mb-auto">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Publicación de anuncio regular</li>
+                            <li class="mb-2"><i class="fas fa-circle-info text-primary me-2"></i> Opción de portada disponible</li>
+                            <li class="mb-2"><i class="fas fa-circle-info text-primary me-2"></i> Redes sociales opcionales</li>
+                        </ul>
+                        <a href="https://wa.me/+525516943808?text=Hola,%20me%20interesa%20el%20paquete%20Mensual.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n?" target="_blank" class="btn-contact mt-4 text-decoration-none">Contratar Plan Mensual</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="service-card h-100 p-4 d-flex flex-column">
+                        <h3 class="service-title text-white mb-3">Plan Bimestral</h3>
+                        <p class="service-desc mb-4">Máxima visibilidad y ahorro a largo plazo.</p>
+                        <div class="d-flex align-items-baseline justify-content-center mb-4">
+                            <span class="fs-1 fw-bold">$110</span>
+                            <span class="fs-5 text-muted">MXN / bimestre</span>
+                        </div>
+                        <ul class="list-unstyled text-start mb-auto">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Publicación de anuncio regular</li>
+                            <li class="mb-2"><i class="fas fa-circle-info text-primary me-2"></i> Opción de portada disponible</li>
+                            <li class="mb-2"><i class="fas fa-circle-info text-primary me-2"></i> Redes sociales opcionales</li>
+                        </ul>
+                        <a href="https://wa.me/+525516943808?text=Hola,%20me%20interesa%20el%20paquete%20Bimestral.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n?" target="_blank" class="btn-contact mt-4 text-decoration-none">Contratar Plan Bimestral</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card service-card p-4">
+                        <h3 class="category-title text-center mb-3">Opciones Adicionales</h3>
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-star text-warning fa-2x me-3"></i>
+                                    <div>
+                                        <h4 class="mb-1 text-white">Publicación en Portada</h4>
+                                        <p class="text-muted mb-0">$15 MXN / semana</p>
+                                        <small class="service-desc">Destaca tu negocio en la página principal.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-share-alt text-info fa-2x me-3"></i>
+                                    <div>
+                                        <h4 class="mb-1 text-white">Inclusión de Redes Sociales</h4>
+                                        <p class="text-muted mb-0">$10 MXN (pago único)</p>
+                                        <small class="service-desc">Añade enlaces a todas tus redes sociales.</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-laptop-code text-primary fa-2x me-3"></i>
+                                    <div>
+                                        <h4 class="mb-1 text-white">Diseño y Desarrollo de Página Web</h4>
+                                        <p class="text-muted mb-0">$600 MXN (pago único)</p>
+                                        <small class="service-desc">Creamos una página web profesional para tu negocio.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="https://wa.me/+525516943808?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20opciones%20adicionales%20de%20publicidad." target="_blank" class="btn-contact text-decoration-none">¡Quiero más información!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section id="terminos-condiciones" class="py-5 terminos-justificados">
+            <h2 class="category-title text-center mb-4">Términos y Condiciones de Publicidad</h2>
+            <p class="text-center mb-5">Al acceder y utilizar los servicios de publicidad ofrecidos por **Belén Conecta** (en adelante, "la Revista"), usted (en adelante, "el Anunciante") acepta los siguientes términos y condiciones:</p>
+
+            <div class="card service-card p-4 mb-4">
+                <h3 class="category-title mb-3">1. Servicios de Publicidad</h3>
+                <ul>
+                    <li>La Revista ofrece espacios publicitarios para que negocios puedan promocionar sus productos y/o servicios.</li>
+                    <li>El Anunciante podrá contratar anuncios por un periodo quincenal por un costo de **$35 (treinta y cinco pesos mexicanos)**.</li>
+                    <li>La publicación en la portada de la Revista tendrá un costo adicional de **$15 (quince pesos mexicanos) por semana**.</li>
+                </ul>
+            </div>
+
+            <div class="card service-card p-4 mb-4">
+                <h3 class="category-title mb-3">2. Tarifas y Formas de Pago</h3>
+                <ul>
+                    <li>Anuncio Quincenal: **$35 (treinta y cinco pesos mexicanos)**.</li>
+                    <li>Anuncio Mensual: **$60 (sesenta pesos mexicanos)**.</li>
+                    <li>Anuncio Bimestral: **$110 (ciento diez pesos mexicanos)**.</li>
+                    <li>Publicación en Portada (adicional): **$15 (quince pesos mexicanos) por semana**.</li>
+                    <li>Diseño y Desarrollo de Página Web (opcional): **$600 (seiscientos pesos mexicanos)** por pago único.</li>
+                    <li>Inclusión de Redes Sociales (adicional): **$10 (diez pesos mexicanos)** por pago único, independientemente del número de redes sociales.</li>
+                </ul>
+            </div>
+
+            <div class="card service-card p-4 mb-4">
+                <h3 class="category-title mb-3">3. Plazos de Pago y Consecuencias de Impago</h3>
+                <ul>
+                    <li>Los pagos por los servicios de publicidad deberán realizarse en las fechas acordadas.</li>
+                    <li>En caso de incumplimiento de pago durante dos quincenas consecutivas o un periodo equivalente, la publicación del Anunciante será retirada de la Revista.</li>
+                    <li>El pago único por la inclusión de redes sociales se respetará incluso en caso de suspensión de los servicios por impago.</li>
+                    <li>Si el Anunciante decide reactivar sus servicios de publicidad tras una suspensión por impago, el cargo único por la inclusión de redes sociales se aplicará nuevamente.</li>
+                </ul>
+            </div>
+
+            <div class="card service-card p-4 mb-4">
+                <h3 class="category-title mb-3">4. Responsabilidad de la Revista</h3>
+                <ul>
+                    <li>La Revista actúa única y exclusivamente como una plataforma de publicidad.</li>
+                    <li>Los creadores y administradores de la Revista no son responsables en absoluto de los acuerdos, contratos o cualquier tipo de relación jurídica que se genere entre el Anunciante y sus propios clientes o terceros.</li>
+                    <li>En caso de surgir cualquier conflicto o disputa entre el Anunciante y sus clientes o terceros, la Revista queda exenta de toda responsabilidad y no se hará cargo de ninguna reclamación o consecuencia derivada de dichos conflictos.</li>
+                    <li>La Revista no establece ninguna relación contractual directa con los anunciantes más allá de la prestación del servicio de publicidad.</li>
+                </ul>
+            </div>
+
+            <div class="card service-card p-4 mb-4">
+                <h3 class="category-title mb-3">5. Naturaleza del Servicio</h3>
+                <ul>
+                    <li>Se reitera que el servicio ofrecido por la Revista es única y exclusivamente para la publicación de anuncios de negocios.</li>
+                    <li>La Revista no participa ni interviene de ninguna manera en las transacciones, acuerdos o contratos que el Anunciante realice con sus clientes.</li>
+                </ul>
+            </div>
+
+            <div class="card service-card p-4 mb-4">
+                <h3 class="category-title mb-3">Cláusulas Adicionales</h3>
+                <ul>
+                    <li><strong>Contenido del Anuncio:</strong> El Anunciante es el único responsable de la veracidad, legalidad y calidad del contenido de su anuncio, incluyendo textos, imágenes, enlaces y cualquier otro material proporcionado para su publicación. La Revista se reserva el derecho de no publicar o retirar cualquier anuncio que considere inapropiado, ofensivo, ilegal o que infrinja derechos de terceros, sin obligación de reembolso.</li>
+                    <li><strong>Propiedad Intelectual:</strong> El Anunciante garantiza que posee todos los derechos de propiedad intelectual necesarios para la publicación del contenido de su anuncio y exime a la Revista de cualquier responsabilidad por reclamaciones de terceros relacionadas con la infracción de derechos de autor, marcas o cualquier otra propiedad intelectual.</li>
+                    <li><strong>Política de No Discriminación y Contenido Ilegal:</strong> **Belén Conecta no discrimina por ningún motivo, incluyendo, pero no limitándose a, preferencias sexuales, raza, condiciones de salud, nacionalidades o cualquier otra característica personal. No apoyamos ni promovemos movimientos extremistas de ningún tipo. Fomentamos activamente el respeto y la sana convivencia entre todos los seres humanos, buscando mantener un término neutral y de inclusión, sin provocar o afectar negativamente a ninguna de las partes o géneros.**
+
+                    **Cualquier detección o reporte verificado de un negocio ilegal, promoción de contenido de índole sexual (incluyendo pornografía, desnudos o contenido sugerente), pornografía infantil, o cualquier forma de discriminación (ya sea por género, orientación sexual, raza, religión, discapacidad, etc.), resultará no solo en la terminación inmediata del servicio de publicidad sin derecho a reembolso, sino que también será remitida a las autoridades pertinentes para la investigación y las acciones legales correspondientes.**</li>
+                    <li><strong>Modificaciones de los Términos y Condiciones:</strong> La Revista se reserva el derecho de modificar los presentes términos y condiciones en cualquier momento, publicando las modificaciones en su plataforma digital. El uso continuado de los servicios de publicidad por parte del Anunciante después de la publicación de las modificaciones constituirá la aceptación de los nuevos términos y condiciones.</li>
+                    <li><strong>Ley Aplicable y Jurisdicción:</strong> Los presentes términos y condiciones se regirán e interpretarán de acuerdo con las leyes de **México**. Cualquier controversia que surja en relación con estos términos y condiciones se someterá a la jurisdicción de los tribunales competentes de **Ciudad de México**.</li>
+                    <li><strong>Aceptación de los Términos:</strong> Al contratar los servicios de publicidad de la Revista, el Anunciante declara haber leído, entendido y aceptado la totalidad de los presentes términos y condiciones.</li>
+                </ul>
+            </div>
+            <p class="text-center mt-5">Para cualquier duda o aclaración sobre nuestros términos o planes, por favor <a href="#contacto" class="text-decoration-none" style="color: purple;">contáctanos</a>.</p>
+        </section>
+    </main>
+
+    <footer class="bg-dark py-4 text-center mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-4 mb-3">
+                <a href="#" class="text-white text-decoration-none">Facebook</a>
+                <a href="#" class="text-white text-decoration-none">WhatsApp</a>
+                <a href="#" class="text-white text-decoration-none">Teléfono</a>
+            </div>
+            <p class="mb-0">© 2023 Belén Conecta - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <img src="" alt="Logo del servicio" class="modal-logo" id="modalLogo">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="contact-info mt-4">
+                <p><i class="fas fa-phone me-2"></i> <span id="modalPhone"></span></p>
+                <p><i class="fas fa-envelope me-2"></i> <span id="modalEmail"></span></p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <span id="modalLocation"></span></p>
+                <p id="modalExtraInfo"></p>
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="master.js"></script>
 </body>
 </html>

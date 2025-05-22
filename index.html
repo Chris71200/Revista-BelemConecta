@@ -5,38 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Belén Conecta es una revista digital que promueve negocios y talentos locales en la comunidad de Belén. Encuentra servicios, tiendas, y mucho más.">
     <title>Belén Conecta - Servicios Locales</title>
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Nuestro CSS -->
     <link rel="stylesheet" href="master.css">
-    <style>
-        /* Estilos adicionales para los puntos del carrusel */
-        .carousel-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
-        }
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .dot.active {
-            background-color: white;
-        }
-    </style>
 </head>
 <body>
-    <!-- Header Steam -->
     <header>
         <div class="container">
             <div class="d-flex align-items-center">
@@ -51,96 +24,99 @@
         </div>
     </header>
 
-    <!-- Contenido principal -->
     <main class="container py-4">
-        <!-- Título y slogan -->
         <div class="text-center mb-5">
             <h1>Belén Conecta</h1>
             <p class="slogan">Tu guía de servicios y talentos locales</p>
         </div>
 
-        <!-- Carrusel modificado con puntos -->
-        <div class="carousel-container" style="position: relative;">
-          <div class="text-center mb-5">
+        <div class="text-center mb-4">
             <p>OFERTAS DE LA SEMANA</p>
-
-          </div>
-            <div class="carousel-slide">
-                <img src="img/imagen (1).jpg" alt="Comunidad Belén">
-                <img src="img/imagen (2).jpg" alt="Servicios locales">
-                <img src="img/imagen (3).jpg" alt="Vecinos trabajando">
-                <img src="img/windows-10x-3840x2160-microsoft-4k-22711 (2).jpg" alt="Vecinos trabajando">
-                <img src="img/imagen (1).png" alt="Vecinos trabajando">
-                <img src="img/imagen (2).png" alt="Vecinos trabajando">
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
             </div>
-
-            <!-- Controles manuales (flechas) -->
-            <div class="carousel-controls">
-                <button id="prevBtn">&#10094;</button>
-                <button id="nextBtn">&#10095;</button>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/imagen (1).jpg" class="d-block w-100 carousel-img-fixed-height" alt="Comunidad Belén">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagen (2).jpg" class="d-block w-100 carousel-img-fixed-height" alt="Servicios locales">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagen (3).jpg" class="d-block w-100 carousel-img-fixed-height" alt="Vecinos trabajando">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/windows-10x-3840x2160-microsoft-4k-22711 (2).jpg" class="d-block w-100 carousel-img-fixed-height" alt="Oferta especial">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagen (1).png" class="d-block w-100 carousel-img-fixed-height" alt="Nuevo servicio">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/imagen (2).png" class="d-block w-100 carousel-img-fixed-height" alt="Talento local">
+                </div>
             </div>
-
-            <!-- Puntos indicadores (nuevo) -->
-            <div class="carousel-dots">
-                <!-- Los puntos se generarán automáticamente con JS -->
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <!-- Sección: Categorías de Negocios -->
         <section id="categorias" class="category-section">
             <h2 class="category-title">Explora por Categorías</h2>
             <p class="text-center mb-4">Selecciona una categoría para ver todos los negocios disponibles</p>
 
             <div class="category-grid">
-                <!-- Categoría 1 -->
                 <a href="lugares/abarrotes.html" class="category-item">
                     <img src="img/categoria-abarrotes.jpg" alt="Abarrotes" class="category-icon">
                     <div class="category-name">Abarrotes</div>
                 </a>
 
-                <!-- Categoría 2 -->
                 <a href="lugares/fontaneria.html" class="category-item">
                     <img src="img/categoria-fontaneria.jpg" alt="Fontanería" class="category-icon">
                     <div class="category-name">Fontanería</div>
                 </a>
 
-                <!-- Categoría 3 -->
                 <a href="lugares/electricistas.html" class="category-item">
                     <img src="img/categoria-electricistas.jpg" alt="Electricistas" class="category-icon">
                     <div class="category-name">Electricistas</div>
                 </a>
 
-                <!-- Categoría 4 -->
                 <a href="lugares/veterinarios.html" class="category-item">
                     <img src="img/categoria-veterinarios.jpg" alt="Veterinarios" class="category-icon">
                     <div class="category-name">Veterinarios</div>
                 </a>
 
-                <!-- Categoría 5 -->
                 <a href="lugares/restaurantes.html" class="category-item">
                     <img src="img/categoria-restaurantes.jpg" alt="Restaurantes" class="category-icon">
                     <div class="category-name">Restaurantes</div>
                 </a>
 
-                <!-- Categoría 6 -->
                 <a href="lugares/profesores.html" class="category-item">
                     <img src="img/categoria-Profesores.jpg" alt="Farmacias" class="category-icon">
                     <div class="category-name">Profesores/regularizacion</div>
                 </a>
 
-                <!-- Categoría 7 -->
                 <a href="lugares/carpinteros.html" class="category-item">
                     <img src="img/categoria-carpinteros.jpg" alt="Carpinteros" class="category-icon">
                     <div class="category-name">Carpinteros</div>
                 </a>
 
-                <!-- Categoría 8 -->
                 <a href="lugares/peluquerias.html" class="category-item">
                     <img src="img/categoria-peluquerias.jpg" alt="Peluquerías" class="category-icon">
                     <div class="category-name">Peluquerías</div>
                 </a>
 
-                <!-- Categoría 9 -->
                 <a href="lugares/abogado.html" class="category-item">
                     <img src="img/categoria-abogado.jpg" alt="Abogados" class="category-icon">
                     <div class="category-name">Abogados</div>
@@ -149,7 +125,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-dark py-4 text-center mt-5">
         <div class="container">
             <div class="d-flex justify-content-center gap-4 mb-3">
@@ -161,7 +136,6 @@
         </div>
     </footer>
 
-    <!-- Modal de Contacto -->
     <div class="modal-overlay" id="contactModal">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
@@ -177,83 +151,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Nuestro JS -->
-    <script>
-        // Carrusel automático con puntos
-        document.addEventListener('DOMContentLoaded', function() {
-            const slide = document.querySelector('.carousel-slide');
-            const images = document.querySelectorAll('.carousel-slide img');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const dotsContainer = document.querySelector('.carousel-dots');
-
-            let counter = 0;
-            const size = images[0].clientWidth;
-            let intervalId;
-            const intervalTime = 3000; // 3 segundos (ajustable)
-
-            // Crea los puntos dinámicamente
-            images.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                dot.addEventListener('click', () => {
-                    counter = index;
-                    updateSlide();
-                    resetInterval();
-                });
-                dotsContainer.appendChild(dot);
-            });
-
-            // Inicializa el primer punto como activo
-            const dots = document.querySelectorAll('.dot');
-            if (dots.length > 0) dots[0].classList.add('active');
-
-            // Función para actualizar la slide y los puntos
-            function updateSlide() {
-                slide.style.transform = `translateX(${-size * counter}px)`;
-
-                // Actualiza el punto activo
-                dots.forEach((dot, idx) => {
-                    dot.classList.toggle('active', idx === counter);
-                });
-            }
-
-            // Función para resetear el intervalo automático
-            function resetInterval() {
-                clearInterval(intervalId);
-                intervalId = setInterval(nextSlide, intervalTime);
-            }
-
-            // Navegación automática
-            function nextSlide() {
-                counter = (counter + 1) % images.length;
-                updateSlide();
-            }
-
-            // Event listeners para los botones
-            nextBtn.addEventListener('click', () => {
-                counter = (counter + 1) % images.length;
-                updateSlide();
-                resetInterval();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                counter = (counter - 1 + images.length) % images.length;
-                updateSlide();
-                resetInterval();
-            });
-
-            // Inicia el intervalo automático
-            intervalId = setInterval(nextSlide, intervalTime);
-
-            // Pausa el carrusel al pasar el mouse (opcional)
-            slide.addEventListener('mouseenter', () => clearInterval(intervalId));
-            slide.addEventListener('mouseleave', () => {
-                intervalId = setInterval(nextSlide, intervalTime);
-            });
-        });
-    </script>
+    <script src="master.js"></script>
 </body>
 </html>

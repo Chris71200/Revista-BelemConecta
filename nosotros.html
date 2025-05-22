@@ -3,62 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belén Conecta</title>
+    <meta name="description" content="Conoce más sobre Belén Conecta, nuestra misión, visión, valores y compromiso ambiental.">
+    <title>Nosotros - Belén Conecta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="master.css">
     <style>
-        body {
-            background-color: #171a21;
+        /* Estilos adicionales específicos para esta página si son necesarios */
+        /* Estos estilos se pueden mover a master.css si se desea centralizar */
+        .about-us-section {
+            padding: 40px 0;
+        }
+        .about-us-section h2 {
+            color: purple; /* Color de título consistente con category-title */
+            margin-bottom: 20px;
+            font-size: 24px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #2a475e;
+        }
+        .about-us-card {
+            background-color: #2a475e; /* Fondo de tarjeta consistente con service-card */
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #b8b6b4; /* Color de texto suave */
+        }
+        .about-us-card h3 {
             color: white;
-            font-family: Arial, sans-serif;
+            margin-bottom: 15px;
         }
-        .about-us {
-            color: #b8b6b4;
-            font-size: 18px;
-            text-align: justify;
-            padding: 50px;
-        }
-        .highlight {
-            color: purple;
-            font-weight: bold;
-        }
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-        .nav-link:hover {
-            color: purple;
+        .about-us-card p {
+            line-height: 1.6;
+            text-align: justify; /* Justificar el texto para una mejor lectura */
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header>
         <div class="container">
-            <a class="navbar-brand" href="#">Belén Conecta</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contactanos.html">Contáctanos</a>
-                    </li>
-                </ul>
+            <div class="d-flex align-items-center">
+                <img src="img/logo.png" alt="Logo de Belén Conecta" width="60" height="60" class="me-3">
+                <nav class="d-flex gap-4">
+                    <a href="index.html" class="text-white text-decoration-none fw-bold">Inicio</a>
+                    <a href="#" class="text-white text-decoration-none fw-bold">Galería</a>
+                    <a href="nosotros.html" class="text-white text-decoration-none fw-bold">Nosotros</a>
+                    <a href="contactanos.html" class="text-white text-decoration-none fw-bold">Contáctanos</a>
+                    <a href="index.html#categorias" class="text-white text-decoration-none fw-bold">Categorías</a>
+                </nav>
             </div>
         </div>
-    </nav>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <p class="about-us">
-                    En <span class="highlight">Belén Conecta</span>, nos esforzamos por brindar información valiosa y relevante a nuestra comunidad. Como revista digital, nos enorgullecemos de contribuir con el medio ambiente al no realizar impresiones masivas con papel. Esto nos permite reducir nuestro impacto ambiental y enfocarnos en lo que realmente importa: conectar con nuestra audiencia y brindar contenido de calidad.
-                </p>
+    </header>
+
+    <main class="container py-5">
+        <h1 class="text-center mb-5 category-title">Acerca de Belén Conecta</h1>
+
+        <section class="about-us-section">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="about-us-card mb-4">
+                        <p>
+                            En <span class="highlight">Belén Conecta</span>, nos esforzamos por brindar información valiosa y relevante a nuestra comunidad. Como revista digital, nos enorgullecemos de contribuir con el medio ambiente al no realizar impresiones masivas con papel. Esto nos permite reducir nuestro impacto ambiental y enfocarnos en lo que realmente importa: conectar con nuestra audiencia y brindar contenido de calidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us-section">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="about-us-card mb-4">
+                        <h2 class="text-center">Nuestra Misión</h2>
+                        <p>En Belén Conecta, nuestra misión es ser el puente que une a la comunidad de Belén, facilitando el descubrimiento y la conexión entre negocios locales, talentos emergentes y residentes. Buscamos fomentar el crecimiento económico y social de nuestra localidad, promoviendo el consumo local y el apoyo mutuo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us-section">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="about-us-card mb-4">
+                        <h2 class="text-center">Nuestra Visión</h2>
+                        <p>Nos visualizamos como la plataforma digital líder en Belén, reconocida por su impacto positivo en la economía local y por ser una herramienta indispensable para el desarrollo de la comunidad. Aspiramos a crear un ecosistema donde cada negocio y talento tenga la oportunidad de prosperar y ser descubierto por quienes más lo necesitan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us-section">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="about-us-card mb-4">
+                        <h2 class="text-center">Nuestros Valores</h2>
+                        <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col">
+                                <h3><i class="fas fa-handshake me-2"></i> Comunidad</h3>
+                                <p>Creemos firmemente en el poder de la unión y el apoyo mutuo. Fomentamos un ambiente de colaboración donde todos se benefician.</p>
+                            </div>
+                            <div class="col">
+                                <h3><i class="fas fa-lightbulb me-2"></i> Innovación</h3>
+                                <p>Estamos en constante búsqueda de nuevas y mejores formas de conectar a nuestra comunidad, adaptándonos a las necesidades cambiantes.</p>
+                            </div>
+                            <div class="col">
+                                <h3><i class="fas fa-heart me-2"></i> Integridad</h3>
+                                <p>Operamos con honestidad y transparencia, construyendo relaciones de confianza con nuestros anunciantes y usuarios.</p>
+                            </div>
+                            <div class="col">
+                                <h3><i class="fas fa-seedling me-2"></i> Crecimiento</h3>
+                                <p>Nos dedicamos a impulsar el desarrollo de los negocios y talentos locales, contribuyendo al progreso de Belén.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center mt-5">
+            <p class="slogan">¡Únete a Belén Conecta y sé parte del crecimiento de nuestra comunidad!</p>
+            <a href="contactanos.html#planes-precios" class="btn-contact text-decoration-none d-inline-block mt-3">Anúnciate con Nosotros</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark py-4 text-center mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-center gap-4 mb-3">
+                <a href="#" class="text-white text-decoration-none">Facebook</a>
+                <a href="#" class="text-white text-decoration-none">WhatsApp</a>
+                <a href="#" class="text-white text-decoration-none">Teléfono</a>
+            </div>
+            <p class="mb-0">© 2023 Belén Conecta - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <img src="" alt="Logo del servicio" class="modal-logo" id="modalLogo">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="contact-info mt-4">
+                <p><i class="fas fa-phone me-2"></i> <span id="modalPhone"></span></p>
+                <p><i class="fas fa-envelope me-2"></i> <span id="modalEmail"></span></p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <span id="modalLocation"></span></p>
+                <p id="modalExtraInfo"></p>
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="master.js"></script>
 </body>
 </html>

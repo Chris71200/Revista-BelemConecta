@@ -1,3 +1,4 @@
+/* Estilos base con prefijos para Firefox */
 body {
     background-color: #171a21;
     color: white;
@@ -16,12 +17,14 @@ header {
     background-color: #2a475e;
     border-radius: 8px;
     overflow: hidden;
+    -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
     height: 100%;
     text-align: center;
 }
 
 .service-card:hover {
+    -moz-transform: translateY(-5px);
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -63,6 +66,7 @@ header {
     font-size: 14px;
     width: 100%;
     cursor: pointer;
+    -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
 
@@ -70,25 +74,22 @@ header {
     background-color: #6a1b9a;
 }
 
-/* Carrusel como en tu versión original */
-.carousel-container {
-    max-width: 800px;
-    margin: 20px auto;
-    overflow: hidden;
+/* Nuevos estilos para el carrusel de Bootstrap */
+/* Ajusta la altura de las imágenes del carrusel */
+.carousel-img-fixed-height {
+    height: 400px; /* Misma altura que tu carrusel anterior */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Puedes añadir un margen inferior al carrusel si lo deseas, o usar una clase de Bootstrap como mb-4 */
+.carousel {
+    max-width: 800px; /* Limita el ancho del carrusel como antes */
+    margin: 20px auto; /* Centra el carrusel */
     border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
 
 /* Líneas divisorias */
 .divider {
@@ -115,18 +116,14 @@ header {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
 }
 
 .modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
+    display: flex;
 }
 
 .modal-content {
@@ -174,10 +171,12 @@ header {
 .category-item {
     text-align: center;
     cursor: pointer;
+    -moz-transition: transform 0.3s;
     transition: transform 0.3s;
 }
 
 .category-item:hover {
+    -moz-transform: scale(1.05);
     transform: scale(1.05);
 }
 
@@ -213,6 +212,16 @@ header {
     background-color: #6a1b9a;
 }
 
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+.slogan {
+    color: white;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
     .modal-content {
         width: 95%;
@@ -228,8 +237,61 @@ header {
         width: 80px;
         height: 80px;
     }
-}
-html {
-        scroll-behavior: smooth;
+
+    /* Fallback para gap en Firefox antiguo */
+    @supports not (gap: 1rem) {
+        nav.d-flex a {
+            margin-right: 1rem;
+        }
+        nav.d-flex a:last-child {
+            margin-right: 0;
+        }
     }
-.slogan{color: white}
+}
+
+/* Reglas específicas para Firefox */
+/* Estas reglas del carrusel ya no son necesarias para el carrusel de Bootstrap,
+   pero las dejo comentadas por si acaso las necesitas para otra cosa. */
+/* @-moz-document url-prefix() {
+    .carousel-slide {
+        scroll-snap-type: x mandatory;
+    }
+
+    .carousel-slide img {
+        scroll-snap-align: start;
+    }
+} */
+
+/* ... (tu CSS existente) ... */
+
+/* Ajustes para los planes de precios si usas service-card */
+.service-card .list-unstyled {
+    font-size: 15px; /* Ajusta tamaño de texto en listas */
+    color: #b8b6b4; /* Color de texto para las listas */
+}
+
+.service-card .list-unstyled li i {
+    font-size: 1.2em; /* Tamaño de los íconos en las listas */
+}
+
+/* Opcional: Estilo para destacar un plan */
+.service-card.border-info {
+    border-color: purple !important; /* Usamos el color de tu tema */
+    box-shadow: 0 0 15px rgba(128, 0, 128, 0.5); /* Sombra para resaltar */
+}
+
+/* Ajustes responsivos para los bloques de precios */
+@media (max-width: 768px) {
+    .row.row-cols-md-3 .col {
+        flex: 0 0 auto; /* Anula el flexbox de Bootstrap para asegurar 1 columna */
+        width: 100%; /* Ocupa todo el ancho */
+    }
+}
+
+/* Nuevos estilos específicos para la página de contacto/publicidad */
+.contact-info-text { /* Renombrado para no confundir con .contact-info del modal */
+    color: #b8b6b4;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 0;
+}
