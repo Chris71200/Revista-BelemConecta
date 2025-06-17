@@ -102,6 +102,8 @@ header {
 /* Títulos de categoría */
 .category-title {
     color: purple;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
     margin-bottom: 20px;
     font-size: 24px;
     padding-bottom: 10px;
